@@ -178,7 +178,7 @@ void UKF::Prediction(double delta_t) {
     double yawd = Xsig_aug(4, i);
     double nu_a = Xsig_aug(5, i);
     double nu_yawdd = Xsig_aug(6, i);
-    // Precalculate sin and cos for optimization
+    // Calculate sin and cos for optimization
     double sin_yaw = sin(yaw);
     double cos_yaw = cos(yaw);
     double arg = yaw + yawd * delta_t;
